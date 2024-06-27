@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="bluedart" class="com.naresh.core.Bluedart"></bean> <!-- dependency class -->
+        <bean id="dtdc" class="com.naresh.core.DTDC"></bean><!-- dependency class -->
+        <bean id="order1" class="com.naresh.core.Amazon"><!-- dependent class -->
+        <property name="courier" ref="bluedart"></property><!--dependency injection -->
+        </bean>
+        <bean id="order2" class="com.naresh.core.Amazon"><!-- dependent class -->
+        <property name="courier" ref="dtdc"></property><!--dependency injection -->
+        </bean>
+
+</beans>
