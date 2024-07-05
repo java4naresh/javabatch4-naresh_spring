@@ -7,8 +7,8 @@
         
         
        <bean id="person1" class="com.naresh.core.Person">
-       <property name="name" value="Naresh"/>
-       <property name="age" value="31"/>
+       <property name="name" value="Naresh"/><!--dependency injection --><!-- setter injection -->
+       <property name="age" value="31"/><!--dependency injection --><!-- setter injection -->
        </bean>
        
 </beans>

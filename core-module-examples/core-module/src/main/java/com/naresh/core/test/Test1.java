@@ -10,7 +10,7 @@ public class Test1 {
 	public static void main(String[] args) {
 		//create a container(IOC)
 		ApplicationContext container = new ClassPathXmlApplicationContext("spring-dependency.xml");
-		Person person1 = (Person)container.getBean("person");
+		Person person1 = (Person)container.getBean("person1");
 		System.out.println(person1);
 	}
 

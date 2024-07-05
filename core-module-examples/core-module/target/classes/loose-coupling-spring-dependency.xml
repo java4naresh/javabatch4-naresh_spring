@@ -5,11 +5,24 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
         
-        <bean id="bluedart" class="com.naresh.core.Bluedart"></bean>
-        <bean id="dtdc" class="com.naresh.core.DTDC"></bean>
-        <bean id="order1" class="com.naresh.core.Amazon">
-        <property name="courier" ref="bluedart"></property>--dependency injection
+        <bean id="bluedart" class="com.naresh.core.Bluedart"></bean> <!-- dependency class -->
+        <bean id="dtdc" class="com.naresh.core.DTDC"></bean><!-- dependency class -->
+        <bean id="order1" class="com.naresh.core.Amazon"><!-- dependent class -->
+        <property name="courier" ref="bluedart"></property><!--dependency injection --><!-- setter injection -->
         </bean>
-        <bean id="order2" class="com.naresh.core.Amazon">
-        <property name="courier" ref="dtdc"></property>
-        <>
+        <bean id="order2" class="com.naresh.core.Amazon"><!-- dependent class -->
+        <property name="courier" ref="dtdc"></property><!--dependency injection -->
+        </bean>
+        
+        <bean id="customer1" class="com.naresh.core.construcor.injection.Customer">
+        <constructor-arg>
+        <value>Naresh</value>
+        </constructor-arg>
+         <constructor-arg>
+        <value>30</value>
+        </constructor-arg>  
+        <!-- <property name="name" value="Naresh"></property>
+        <property name="age" value="31"></property> -->
+        </bean>
+
+</beans>
