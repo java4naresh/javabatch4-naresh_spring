@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+      
+      <bean id="data" class="com.naresh.core.data.EmployeeData">
+      </bean>
+      
+      <bean id="service" class="com.naresh.core.service.EmployeeService">
+      <!-- <property name="employeeData" ref="data"></property> -->
+      <constructor-arg ref="data"></constructor-arg>
+      </bean>
+      
+      <bean id="controller" class="com.naresh.core.controller.EmployeeController">
+      <!-- <property name="service" ref="service"></property> -->
+      <constructor-arg ref="service"></constructor-arg>
+      </bean>
+</beans>
