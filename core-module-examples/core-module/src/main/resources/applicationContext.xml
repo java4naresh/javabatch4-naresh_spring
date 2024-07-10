@@ -25,17 +25,54 @@
       <constructor-arg ref="srilatha"></constructor-arg>
       </bean> -->
       
-       <bean id="srilatha" class="com.naresh.core.flow.Srilatha" lazy-init="true">
-       <!-- <property name="naresh" ref="naresh"></property> -->
+      <!--  <bean id="srilatha" class="com.naresh.core.flow.Srilatha" lazy-init="true">
+       <property name="naresh" ref="naresh"></property>
        <constructor-arg ref="naresh"></constructor-arg>
       </bean>
       
       <bean id="naresh" class="com.naresh.core.flow.Naresh" lazy-init="true">
-      <!-- <property name="srilatha" ref="srilatha"></property>  -->
+      <property name="srilatha" ref="srilatha"></property> 
       <constructor-arg ref="srilatha"></constructor-arg>
-      </bean>
+      </bean> -->
       
+      <!-- <bean id="studentNaresh" class="com.naresh.core.collection.Student">
+      <property name="studentName" value="Naresh"></property>
+      <property name="marks">
+      <list>
+      <value>85</value>
+      <value>92</value>
+      <value>95</value>
+      <value>100</value>
+      <value>81</value>
+      <value>75</value>
+      </list>
+      </property>
+      </bean>  -->
       
+      <!-- <bean id="person1" class="com.naresh.core.collection.Person">
+      <property name="personName" value="Naresh"></property>
+      <property name="phoneNumbers">
+      <set>
+      <value>9951288766</value>
+      <value>9951288766</value>
+      <value>9951288667</value>
+      </set>
+      </property>
+      </bean> -->
+      
+      <bean id="studentNaresh" class="com.naresh.core.collection.Student">
+      <property name="studentName" value="Naresh"></property>
+      <property name="marks">
+      <map>
+      <entry key="Telugu" value="100"></entry>
+      <entry key="English" value="85"></entry>
+      <entry key="Hindi" value="75"></entry>
+      <entry key="Maths" value="84"></entry>
+      <entry key="Science" value="74"></entry>
+      <entry key="Social" value="95"></entry>
+      </map>
+      </property>
+      </bean> 
       
       
       
