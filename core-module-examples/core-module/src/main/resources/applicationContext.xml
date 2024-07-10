@@ -4,16 +4,40 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
       
-      <bean id="data" class="com.naresh.core.data.EmployeeData">
+      <!-- <bean id="data" class="com.naresh.core.data.EmployeeData">
       </bean>
       
       <bean id="service" class="com.naresh.core.service.EmployeeService">
-      <!-- <property name="employeeData" ref="data"></property> -->
+      <property name="employeeData" ref="data"></property>
+      <property name="controller" ref="controller"></property>
       <constructor-arg ref="data"></constructor-arg>
       </bean>
       
       <bean id="controller" class="com.naresh.core.controller.EmployeeController">
-      <!-- <property name="service" ref="service"></property> -->
+      <property name="service" ref="service"></property>
       <constructor-arg ref="service"></constructor-arg>
+      </bean> -->
+      
+     
+      
+      <!-- <bean id="pavan" class="com.naresh.core.flow.Pavan">
+      <property name="srilatha" ref="srilatha"></property>
+      <constructor-arg ref="srilatha"></constructor-arg>
+      </bean> -->
+      
+       <bean id="srilatha" class="com.naresh.core.flow.Srilatha" lazy-init="true">
+       <!-- <property name="naresh" ref="naresh"></property> -->
+       <constructor-arg ref="naresh"></constructor-arg>
       </bean>
+      
+      <bean id="naresh" class="com.naresh.core.flow.Naresh" lazy-init="true">
+      <!-- <property name="srilatha" ref="srilatha"></property>  -->
+      <constructor-arg ref="srilatha"></constructor-arg>
+      </bean>
+      
+      
+      
+      
+      
+      
 </beans>
