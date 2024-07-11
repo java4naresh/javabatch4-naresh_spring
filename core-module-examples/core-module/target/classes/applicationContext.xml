@@ -60,7 +60,7 @@
       </property>
       </bean> -->
       
-      <bean id="studentNaresh" class="com.naresh.core.collection.Student">
+      <!-- <bean id="studentNaresh" class="com.naresh.core.collection.Student">
       <property name="studentName" value="Naresh"></property>
       <property name="marks">
       <map>
@@ -72,7 +72,27 @@
       <entry key="Social" value="95"></entry>
       </map>
       </property>
-      </bean> 
+      </bean>  -->
+      
+      <bean id="palnadu" class="com.naresh.core.autowiring.Train" primary="true">
+      <property name="trainName" value="janmabhumi"></property>
+      <property name="trainNumber" value="12806"></property>
+      <property name="startsAt" value="Lingamapally"></property>
+      <property name="endsAt" value="Vizag"></property>
+      </bean>
+      
+      <bean id="janmabhum" class="com.naresh.core.autowiring.Train">
+      <property name="trainName" value="palnadu"></property>
+      <property name="trainNumber" value="12808"></property>
+      <property name="startsAt" value="Vikarabad"></property>
+      <property name="endsAt" value="Guntur"></property>
+      </bean>
+      
+      <bean id="traveller1" class="com.naresh.core.autowiring.Traveller" autowire="constructor">
+      <!-- <property name="name" value="Naresh"></property> -->
+      <constructor-arg value="Naresh"></constructor-arg>
+      <!-- <property name="train" ref="janmabhumi"></property> -->
+      </bean>
       
       
       
