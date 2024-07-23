@@ -1,13 +1,22 @@
 package com.naresh.core;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Amazon {//dependent
 	
+	@Autowired
+	//@Qualifier("DTDC")
+	@Qualifier("bluedart")
 	private Courier courier;//dependency
 	
 	public void sendOrderToCustomer() {
 		courier.deliverOrder();
 	}
 
+	//@Autowired
 	public Amazon(Courier courier) {
 		super();
 		this.courier = courier;
@@ -21,6 +30,7 @@ public class Amazon {//dependent
 		return courier;
 	}
 
+	//@Autowired
 	public void setCourier(Courier courier) {
 		this.courier = courier;
 	}

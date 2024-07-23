@@ -1,5 +1,6 @@
 package com.naresh.core;
 
+
 public class Person {
 	
 	private String name;

@@ -1,15 +1,16 @@
 package com.naresh.core.test;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import com.naresh.core.Person;
 
-import com.naresh.core.collection.Person;
 
 public class PersonTest {
 
 	public static void main(String[] args) {
-		ApplicationContext container = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Person p1 = (Person)container.getBean("person1");
+		//ApplicationContext container = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ApplicationContext container = new AnnotationConfigApplicationContext(com.naresh.core.config.SpringConfiguration.class);
+		Person p1 = (Person)container.getBean("createPerson");
 		System.out.println(p1);
 	}
 
