@@ -2,10 +2,17 @@ package com.naresh.core.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import com.naresh.core.service.EmployeeService;
 
+@Component
+@Scope("prototype")
 public class EmployeeController {
 	
+	@Autowired
 	private EmployeeService service;
 	
 	public EmployeeController() {

@@ -39,9 +39,5 @@ public class Amazon {//dependent
 	public String toString() {
 		return "Amazon [courier=" + courier + "]";
 	}
-	
-	
-	
-	
 
 }

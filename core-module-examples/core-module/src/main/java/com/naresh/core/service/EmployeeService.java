@@ -2,14 +2,16 @@ package com.naresh.core.service;
 
 import java.util.List;
 
-import com.naresh.core.controller.EmployeeController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.naresh.core.data.EmployeeData;
 
+@Component
 public class EmployeeService {
 	
+	@Autowired
 	private EmployeeData employeeData;
-	
-	private EmployeeController controller;
 	
 	public EmployeeService() {
 		System.out.println("EmployeeService zero constructor");
@@ -27,14 +29,6 @@ public class EmployeeService {
 	
 	public List<String> getNames() {
 		return employeeData.getNames();
-	}
-
-	public EmployeeController getController() {
-		return controller;
-	}
-
-	public void setController(EmployeeController controller) {
-		this.controller = controller;
 	}
 
 	public EmployeeData getEmployeeData() {

@@ -3,6 +3,9 @@ package com.naresh.core.data;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class EmployeeData {
 	
 	private static List<String> names = new ArrayList();
