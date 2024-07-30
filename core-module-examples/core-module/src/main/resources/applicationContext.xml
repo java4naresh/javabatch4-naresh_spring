@@ -94,6 +94,10 @@
       <!-- <property name="train" ref="janmabhumi"></property> -->
       </bean>
       
+      <bean id="test1" class="com.naresh.core.lifecycle.Test" init-method="m1" destroy-method="m2" >
+		  
+	  </bean>
+      
       
       
       

@@ -3,11 +3,13 @@ package com.naresh.core.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.naresh.core.data.EmployeeData;
 
 @Component
+@Scope("prototype")
 public class EmployeeService {
 	
 	@Autowired

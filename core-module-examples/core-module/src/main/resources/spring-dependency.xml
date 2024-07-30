@@ -6,7 +6,7 @@
         
         
         
-       <bean id="person1" class="com.naresh.core.Person">
+       <bean id="person1" class="com.naresh.core.Person"><!-- Spring Bean -->
        <property name="name" value="Naresh"/><!--dependency injection --><!-- setter injection -->
        <property name="age" value="31"/><!--dependency injection --><!-- setter injection -->
        </bean>
