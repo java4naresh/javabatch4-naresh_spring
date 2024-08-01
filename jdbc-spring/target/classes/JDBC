@@ -1,0 +1,10 @@
+advantage of spring jdbc over normal jdbc.
+
+it will avoid boiler plate code.
+
+by using jdbctemplate we will avoid boiler plate code. 
+
+what is the steps we need to follow to use Spring JDBC?
+we need to inject a JDBCTemplate class object in to our DAO classes.
+we need to inject a DataSource object into JDBCTemplate class.
+we need provide DB details to Data Source object.
